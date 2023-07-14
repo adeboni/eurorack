@@ -18,7 +18,6 @@
 #define HALF_MAX_OUTPUT 1024
 #define UPDATE_RATE_US  2000
 
-TaskHandle_t Core0;
 Adafruit_MCP4728 mcp[3];
 
 Adafruit_SH1106G display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
