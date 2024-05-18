@@ -48,9 +48,6 @@ git clone https://github.com/mickabrig7/projectM-presets-rpi5.git
 # sudo nano /etc/environment
 # MESA_GL_VERSION_OVERRIDE=4.5
 
-# sudo raspi-config, then select Advanced Options -> Audio Config -> Pipewire
-#                                System Options -> Boot / Auto Logon -> Console Auto Logon
-
 # sudo nano /boot/firmware/cmdline.txt
 # add video=HDMI-A-1:1280x720M@60 video=HDMI-A-2:1280x720M@60
 
@@ -80,3 +77,10 @@ sudo cp monome-snd.dtbo /boot/overlays/monome-snd.dtbo
 # enable i2s and i2c
 # dtoverlay=monome-snd
 # dtoverlay=gpio-key,gpio=12,active_low=1,gpio_pull=up,keycode=19
+
+# sudo nano /etc/rc.local
+# add /opt/ProjectMSDL/env/bin/python3 /opt/ProjectMSDL/projectMAR.py
+
+# sudo raspi-config, then select Advanced Options -> Audio Config -> Pipewire
+#                                System Options -> Boot / Auto Logon -> Console Auto Logon
+#                                Performance -> Overlay File System
