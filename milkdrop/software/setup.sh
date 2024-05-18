@@ -36,16 +36,20 @@ sudo mkdir /opt/ProjectMSDL
 sudo cp -r ~/frontend-sdl2/cmake-build/src/* /opt/ProjectMSDL/
 sudo chmod 777 -R /opt/ProjectMSDL
 
+cd ~
+git clone https://github.com/mickabrig7/projectM-presets-rpi5.git
+
 # nano /opt/ProjectMSDL/projectMSDL.properties
 # window.fullscreen = true
 # projectM.meshX = 64
 # projectM.meshY = 32
+# update preset config path
 
 # sudo nano /etc/environment
 # MESA_GL_VERSION_OVERRIDE=4.5
 
-# sudo raspi-config, then select Advanced Options - Audio Config - Pipewire (Reboot if you made any changes)
-# System Options -> Boot / Auto Logon -> Console Auto Logon
+# sudo raspi-config, then select Advanced Options -> Audio Config -> Pipewire
+#                                System Options -> Boot / Auto Logon -> Console Auto Logon
 
 # sudo nano /boot/firmware/cmdline.txt
 # add video=HDMI-A-1:1280x720M@60 video=HDMI-A-2:1280x720M@60
@@ -76,7 +80,3 @@ sudo cp monome-snd.dtbo /boot/overlays/monome-snd.dtbo
 # enable i2s and i2c
 # dtoverlay=monome-snd
 # dtoverlay=gpio-key,gpio=12,active_low=1,gpio_pull=up,keycode=19
-
-cd ~
-git clone https://github.com/mickabrig7/projectM-presets-rpi5.git
-# update config preset path
