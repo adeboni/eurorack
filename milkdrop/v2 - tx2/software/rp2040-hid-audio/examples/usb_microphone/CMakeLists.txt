@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.12)
+add_executable(usb_microphone main.c usb_descriptors.c usb_microphone.c)
+target_include_directories(usb_microphone PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(usb_microphone PRIVATE pico_unique_id tinyusb_device tinyusb_board pico_analog_microphone)
+pico_add_extra_outputs(usb_microphone)

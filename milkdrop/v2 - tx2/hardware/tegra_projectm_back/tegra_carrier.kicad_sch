@@ -1,0 +1,65 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 2eda1879-675e-4527-a56a-519c0454217c)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 145.415 21.59) (size 57.15 34.29) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 2e91fbf6-2657-4fa0-aa81-361993b37f39)
+    (property "Sheetname" "HDMI" (at 145.415 20.8784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "hdmi.kicad_sch" (at 145.415 56.4646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "tegra_carrier"
+        (path "/2eda1879-675e-4527-a56a-519c0454217c" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 86.36 21.59) (size 53.34 34.29) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 787031c1-7b39-4bc0-86e3-f92369c0d991)
+    (property "Sheetname" "Tegra" (at 86.36 20.8784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "tegra.kicad_sch" (at 86.36 56.4646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "tegra_carrier"
+        (path "/2eda1879-675e-4527-a56a-519c0454217c" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 30.48 21.59) (size 46.99 34.29) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 854f66fe-f245-4978-b797-cf7ac6ae611b)
+    (property "Sheetname" "Power" (at 30.48 20.8784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "power.kicad_sch" (at 30.48 56.4646 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "tegra_carrier"
+        (path "/2eda1879-675e-4527-a56a-519c0454217c" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
