@@ -2792,45 +2792,45 @@
         )
       )
     )
-    (symbol "Regulator_Linear:AMS1117-3.3" (in_bom yes) (on_board yes)
+    (symbol "Regulator_Switching:R-783.3-1.0" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at -3.81 3.175 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "AMS1117-3.3" (at 0 3.175 0)
+      (property "Value" "R-783.3-1.0" (at 0 3.175 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 0 5.08 0)
+      (property "Footprint" "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" (at 1.27 -6.35 0)
+        (effects (font (size 1.27 1.27) italic) (justify left) hide)
+      )
+      (property "Datasheet" "https://www.recom-power.com/pdf/Innoline/R-78xx-1.0.pdf" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (at 2.54 -6.35 0)
+      (property "ki_keywords" "dc-dc recom Step-Down DC/DC-Regulator" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "linear regulator ldo fixed positive" (at 0 0 0)
+      (property "ki_description" "1A Step-Down DC/DC-Regulator, 4.75-18V input, 3.3V fixed Output Voltage, LM78xx replacement, -40°C to +85°C, SIP3" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223" (at 0 0 0)
+      (property "ki_fp_filters" "Converter*DCDC*RECOM*R*78E*0.5*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "SOT?223*TabPin2*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "AMS1117-3.3_0_1"
-        (rectangle (start -5.08 -5.08) (end 5.08 1.905)
+      (symbol "R-783.3-1.0_0_1"
+        (rectangle (start -5.08 1.905) (end 5.08 -5.08)
           (stroke (width 0.254) (type default))
           (fill (type background))
         )
       )
-      (symbol "AMS1117-3.3_1_1"
-        (pin power_in line (at 0 -7.62 90) (length 2.54)
-          (name "GND" (effects (font (size 1.27 1.27))))
+      (symbol "R-783.3-1.0_1_1"
+        (pin power_in line (at -7.62 0 0) (length 2.54)
+          (name "IN" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin power_out line (at 7.62 0 180) (length 2.54)
-          (name "VO" (effects (font (size 1.27 1.27))))
+        (pin power_in line (at 0 -7.62 90) (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin power_in line (at -7.62 0 0) (length 2.54)
-          (name "VI" (effects (font (size 1.27 1.27))))
+        (pin power_out line (at 7.62 0 180) (length 2.54)
+          (name "OUT" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
       )
@@ -5455,47 +5455,6 @@
     )
   )
 
-  (symbol (lib_id "Device:LED") (at 127.635 184.785 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 024fe0cf-8ca8-449a-916a-87c87636ce05)
-    (property "Reference" "D7" (at 131.445 185.7375 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "LED" (at 131.445 188.2775 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 127.635 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 127.635 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7cbff925-e07a-4b34-9f24-ce9c71c0d74a))
-    (pin "2" (uuid 24a29b5e-8c63-4d0a-8e40-3879924cb97e))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "D7") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "D4") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "D3") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "D14") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R_US") (at 281.305 135.255 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 026313fe-db98-4694-8e1c-003843c40a18)
@@ -6578,52 +6537,6 @@
       (project "combo_laser_driver"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C21") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 113.665 192.405 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 209a3914-574b-40e8-8559-6753ee072e62)
-    (property "Reference" "R11" (at 116.205 192.405 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "4.7k" (at 118.5164 192.405 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 111.887 192.405 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 113.665 192.405 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 08ac3659-cc46-4ecf-9bd6-0e774f275049))
-    (pin "2" (uuid b463de4b-253d-40b3-98ba-43850621096d))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "R11") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "R79") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "R24") (unit 1)
-        )
-      )
-      (project "RP2040_minimal"
-        (path "/82a49de2-ec1b-43dd-97fe-0b636089eb84"
-          (reference "R5") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "R26") (unit 1)
         )
       )
     )
@@ -8293,47 +8206,6 @@
     )
   )
 
-  (symbol (lib_id "Device:LED") (at 113.665 184.785 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 46508286-5a7e-4dd5-9157-70d5149bf166)
-    (property "Reference" "D3" (at 117.475 185.7375 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "LED" (at 117.475 188.2775 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 113.665 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 113.665 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9373c2b4-a807-40a9-b7f2-afb37fc673a8))
-    (pin "2" (uuid 5d9b7ee6-a6be-46be-b0e0-9f16ba9db5f8))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "D3") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "D2") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "D1") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "D12") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C") (at 264.795 73.025 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 47175dc0-c2d9-4a25-946e-290afeb21d64)
@@ -8982,46 +8854,6 @@
     )
   )
 
-  (symbol (lib_id "power:+3.3V") (at 127.635 180.975 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 61de6cc2-8a0d-429f-b15a-4aa6aa958cc2)
-    (property "Reference" "#PWR056" (at 127.635 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 123.825 177.165 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 127.635 180.975 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 127.635 180.975 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1445a929-a7c6-45ec-8efb-e6f8595cffa3))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "#PWR056") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "#PWR0152") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "#PWR039") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR031") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 191.135 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 622da3e3-709d-4e64-ae20-5d1b6091ebd6)
@@ -9346,14 +9178,14 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 379.095 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7aa))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d2ff))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ab))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d300))
     (pin "3" (uuid 8fc5f10d-8f96-4e9a-9d01-77f68d8c4e3d))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e26))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e27))
     (pin "1" (uuid 30cb1d39-0617-4be3-8f57-a9e5775d1f1b))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78c))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78d))
     (pin "2" (uuid 79352f23-c9fd-4108-ad27-c2c3bc57e574))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d5))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d6))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
@@ -9557,48 +9389,6 @@
     )
   )
 
-  (symbol (lib_id "Regulator_Linear:AMS1117-3.3") (at 84.455 184.785 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 6e9682fe-639d-483c-ad70-05cd8cd479fb)
-    (property "Reference" "U4" (at 84.455 178.435 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "AMS1117-3.3" (at 84.455 180.975 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (at 84.455 179.705 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (at 86.995 191.135 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 77e48f7f-55e0-44e5-b859-ea6e3504e04a))
-    (pin "2" (uuid 0503b054-2cef-4aff-834b-08b5856f2bed))
-    (pin "3" (uuid 9a8f7dc1-fd31-4885-8c8c-41e30eac86ae))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "U4") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "U6") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "U9") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "U3") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Amplifier_Operational:MCP6002-xSN") (at 379.095 155.575 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6f5d255f-0404-4ade-b0ac-f9584147f868)
@@ -9614,14 +9404,14 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 379.095 155.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7aa))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d2ff))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ac))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d301))
     (pin "3" (uuid 5bed7108-629f-4b54-8f26-e05ee25f2a25))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e26))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e28))
     (pin "1" (uuid b0a5e80d-c916-4fea-8ccf-022230b530b5))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78c))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78e))
     (pin "2" (uuid 3aaee1d5-f542-454f-8d4e-ac5bb7c1c883))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d5))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d7))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
@@ -10367,46 +10157,6 @@
     )
   )
 
-  (symbol (lib_id "PCM_4ms_Power-symbol:+12V") (at 113.665 180.975 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 815457cd-c413-49c2-8056-b026d40439e6)
-    (property "Reference" "#PWR049" (at 113.665 184.785 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+12V" (at 111.125 177.165 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 113.665 180.975 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 113.665 180.975 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5c6910b2-29b8-4633-ad12-c347ac07e16c))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "#PWR049") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "#PWR0150") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "#PWR094") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR032") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:C") (at 394.97 275.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8236d57c-0bf0-40f0-9fab-443c0058e15e)
@@ -10448,51 +10198,6 @@
       (project "combo_laser_driver"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "C15") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 127.635 196.215 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 82cfacf9-cc21-45d3-8208-350bdb405780)
-    (property "Reference" "#PWR057" (at 127.635 202.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 127.635 200.66 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 127.635 196.215 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 127.635 196.215 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid b78ff6e3-9d17-4657-8ae1-8ae1925c5c64))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "#PWR057") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "#PWR0163") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "#PWR099") (unit 1)
-        )
-      )
-      (project "RP2040_minimal"
-        (path "/82a49de2-ec1b-43dd-97fe-0b636089eb84"
-          (reference "#PWR04") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR052") (unit 1)
         )
       )
     )
@@ -10844,9 +10549,9 @@
     (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63818))
     (pin "5" (uuid 1ae5f19f-c604-40f3-8bba-e1351bf132b1))
     (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af831))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78d))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78f))
     (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d3))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d6))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d8))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
@@ -11491,51 +11196,6 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 113.665 196.215 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9ef92157-d893-4e45-9170-ee73106aa1ac)
-    (property "Reference" "#PWR050" (at 113.665 202.565 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 113.665 200.66 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 113.665 196.215 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 113.665 196.215 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 9f58062f-da29-4cd3-9f4b-191de15018d2))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "#PWR050") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "#PWR0161") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "#PWR095") (unit 1)
-        )
-      )
-      (project "RP2040_minimal"
-        (path "/82a49de2-ec1b-43dd-97fe-0b636089eb84"
-          (reference "#PWR04") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR033") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R_US") (at 244.475 121.285 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9f192fc0-9f7c-4a5f-9a9a-4ac6a8fa425c)
@@ -11926,14 +11586,14 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 379.095 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7aa))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d2ff))
-    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63817))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e26))
-    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af830))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78c))
-    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d2))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d5))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ad))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d302))
+    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63819))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e29))
+    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af832))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef790))
+    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d4))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d9))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
@@ -12001,13 +11661,13 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 407.67 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ac))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d301))
-    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63819))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e28))
-    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af832))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ae))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d303))
+    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e6381a))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e2a))
+    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af833))
     (pin "4" (uuid a54a39e6-f54e-488e-b08b-aac2fa1c7177))
-    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d4))
+    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d5))
     (pin "8" (uuid 3a25e838-6643-471c-983b-ef9470681ce1))
     (instances
       (project "laser_controller"
@@ -13328,6 +12988,33 @@
     )
   )
 
+  (symbol (lib_id "Regulator_Switching:R-783.3-1.0") (at 84.455 184.785 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c3b4aeda-c179-4bc2-9b91-f054f6d91e2d)
+    (property "Reference" "U10" (at 84.455 177.8 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R-783.3-1.0" (at 84.455 180.34 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" (at 85.725 191.135 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.recom-power.com/pdf/Innoline/R-78xx-1.0.pdf" (at 84.455 184.785 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "2" (uuid 3ce3b5b7-eb60-4bd7-b8c3-8f35816cada1))
+    (pin "1" (uuid 62836ead-1245-46ca-83fc-d1d6d3304d7e))
+    (pin "3" (uuid 09fc4b3c-5e08-42bc-8feb-3ac5f7331164))
+    (instances
+      (project "laser_controller"
+        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
+          (reference "U10") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 215.265 147.32 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c6d118c8-e590-4721-88a0-f3d1a932cbd4)
@@ -13436,12 +13123,12 @@
     )
     (pin "7" (uuid a5045425-be74-478f-a039-3e4068b4c1de))
     (pin "6" (uuid 8a47401e-4869-4c56-810f-c84e0a025ccc))
-    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63818))
+    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e6381b))
     (pin "5" (uuid 8328429c-d1ba-4b8c-a34d-14f7d201b330))
-    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af831))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78d))
-    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d3))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d6))
+    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af834))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef791))
+    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d6))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4da))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
@@ -13603,52 +13290,6 @@
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
           (reference "#PWR030") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 127.635 192.405 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid cc85cdcd-ed28-49e6-8d4e-78b5ee70e0fe)
-    (property "Reference" "R14" (at 130.175 192.405 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "1k" (at 132.4864 192.405 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 125.857 192.405 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 127.635 192.405 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 52c70a54-d0a8-4664-b386-355826e33d90))
-    (pin "2" (uuid 23e98d3d-8c5f-42d3-8b6f-29faeb2228e8))
-    (instances
-      (project "jukebox_light_controller"
-        (path "/3d7cdb1e-a810-4ff2-a852-82c48438ee64"
-          (reference "R14") (unit 1)
-        )
-      )
-      (project "laser_controller"
-        (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
-          (reference "R81") (unit 1)
-        )
-      )
-      (project "canbus_adapter"
-        (path "/805386a4-6883-4c41-8ba1-2a13d67886f6"
-          (reference "R26") (unit 1)
-        )
-      )
-      (project "RP2040_minimal"
-        (path "/82a49de2-ec1b-43dd-97fe-0b636089eb84"
-          (reference "R5") (unit 1)
-        )
-      )
-      (project "combo_laser_driver"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "R28") (unit 1)
         )
       )
     )
@@ -14770,13 +14411,13 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 407.67 275.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7ac))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d301))
-    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63819))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e28))
-    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af832))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7af))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d304))
+    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e6381c))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e2b))
+    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af835))
     (pin "4" (uuid add9145b-742b-4540-8fb7-17383c456998))
-    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d4))
+    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d7))
     (pin "8" (uuid cc00d039-4803-48a3-a3df-c4d04ad550fc))
     (instances
       (project "laser_controller"
@@ -14973,14 +14614,14 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" (at 412.115 74.93 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7aa))
-    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d2ff))
-    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e63817))
-    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e26))
-    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af830))
-    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef78c))
-    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d2))
-    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4d5))
+    (pin "7" (uuid 71969a87-a872-4fd5-a418-68bd241dd7b0))
+    (pin "6" (uuid c60a265d-3870-4fd6-af9f-636078e2d305))
+    (pin "3" (uuid 960390bf-8354-4213-a30b-e928f2e6381d))
+    (pin "5" (uuid 6589263b-fcb4-455e-b232-145123cb7e2c))
+    (pin "1" (uuid c422db14-5cc4-4b3e-9897-9177888af836))
+    (pin "4" (uuid 0355bfd7-0c30-43f3-9738-f0b3fc8ef792))
+    (pin "2" (uuid e8273535-3a15-4f61-b1fc-d91ef6aeb2d8))
+    (pin "8" (uuid 4ad06d40-544f-4bdd-a62d-491c8edcf4db))
     (instances
       (project "laser_controller"
         (path "/66f4951c-8ca6-44d4-8426-28e02ddf3b18"
