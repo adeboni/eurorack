@@ -172,8 +172,7 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.2
+        0.0
       ],
       "via_dimensions": [
         {
@@ -406,7 +405,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "laser_controller.kicad_pro",
+    "filename": "wand_receiver.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -483,7 +482,7 @@
   },
   "sheets": [
     [
-      "66f4951c-8ca6-44d4-8426-28e02ddf3b18",
+      "6528a74f-fb83-4bcc-9141-ec4744f78469",
       ""
     ]
   ],

@@ -48,13 +48,7 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -113,7 +107,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
@@ -171,16 +165,8 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [
-        0.0,
-        0.2
-      ],
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        }
-      ],
+      "track_widths": [],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false
     },
     "layer_presets": [],
@@ -406,7 +392,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "laser_controller.kicad_pro",
+    "filename": "mult.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -483,7 +469,7 @@
   },
   "sheets": [
     [
-      "66f4951c-8ca6-44d4-8426-28e02ddf3b18",
+      "07fa08ef-7d90-4f44-9eb4-1ace9692e0bd",
       ""
     ]
   ],
