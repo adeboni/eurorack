@@ -1,0 +1,2 @@
+Based on https://github.com/GaudiLabs/OpenThereminV4, but combined the Eurorack functionality into the main board.
+Note, the current PCB has the positions of the volume and pitch antenna connections reversed from the ideal positions.
